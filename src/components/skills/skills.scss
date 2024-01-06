@@ -1,0 +1,114 @@
+.skills {
+  position: relative;
+  margin-top: 200px;
+  margin-bottom: 300px;
+
+  &__list {
+    margin-top: 295px;
+    @apply grid grid-cols-2 gap-x-10 gap-y-40;
+  }
+  &__item {
+    cursor: pointer;
+  }
+
+  &__title {
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+  &__text {
+    font-family: "Outfit";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 32px;
+  }
+
+  &__contiune {
+    max-width: 156px;
+    padding-bottom: 10px;
+    display: inline-block;
+    position: relative;
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    overflow: hidden;
+
+    &::before {
+      position: absolute;
+      bottom: 0px;
+      right: 0;
+      left: 0;
+      display: block;
+      max-width: 156px;
+      height: 1px;
+      background-color: #fff;
+      transition: 0.5s;
+      content: "";
+    }
+    &::after {
+      position: absolute;
+      bottom: 0px;
+      left: -120%;
+      right: 0;
+      display: block;
+      max-width: 156px;
+      height: 1px;
+      background-color: #36a112;
+      transition: 0.5s;
+      transition-delay: 0.1s;
+      content: "";
+    }
+
+    &:hover::before {
+      left: 100%;
+    }
+    &:hover::after {
+      left: 0;
+    }
+  }
+}
+.skills__item:hover .skills__item-img {
+  width: 120px;
+  height: 160px;
+  opacity: 1;
+}
+.skills__item-img {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-radius: 10px;
+  opacity: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: height 0.5s linear, width 0.5s linear, opacity 0.5s linear;
+}
+
+@media screen and (max-width: 940px) {
+  .skills {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    &__list {
+      margin-top: 150px;
+    }
+  }
+  .skills__item-img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .skills {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    &__list {
+      margin-top: 100px;
+      @apply grid grid-cols-1 gap-x-0 gap-y-20;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.cursor {
+  position: fixed;
+  width: 582px;
+  height: 582px;
+  background-image: linear-gradient(
+    to left,
+    rgba(226, 182, 113, 0.7) 50%,
+    rgba(54, 161, 18, 0.6) 50% 100%
+  );
+  filter: blur(172px);
+  border-radius: 100px;
+  z-index: -1;
+
+  animation-name: cursor;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.cursor-green {
+  background-image: none;
+  background-color: rgba(54, 161, 18, 0.6);
+}
+
+@media screen and (max-width: 940px) {
+  .cursor {
+    display: none;
+  }
+}
+
+@keyframes cursor {
+  0% {
+    border-radius: 100px;
+  }
+  100% {
+    border-radius: 50%;
+
+    width: 542px;
+    height: 542px;
+    filter: blur(160px);
+  }
+}

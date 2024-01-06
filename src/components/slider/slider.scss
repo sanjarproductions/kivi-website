@@ -1,0 +1,23 @@
+.slider {
+  margin-top: 400px;
+
+  &__title {
+    font-family: "K2D", sans-serif;
+    max-width: 599px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 38px;
+
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .slider {
+    margin-top: 250px;
+    &__title {
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+}

@@ -1,0 +1,146 @@
+.corousel {
+  margin-top: 200px;
+  margin-bottom: 50px;
+
+  &__item {
+    position: relative;
+    width: 400px !important;
+    height: 400px !important;
+    border-radius: 60px;
+  }
+  &__link {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+}
+.corousel__block {
+  width: 100%;
+  height: 300px !important;
+  overflow: hidden;
+  border-radius: 60px;
+}
+
+.corousel__img {
+  width: 100%;
+  height: 100%;
+  border-radius: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  transition: 0.7s !important;
+  &:hover {
+    background-size: 110%;
+  }
+}
+.corousel__swiper:hover ~ .corousel__drag {
+  width: 120px;
+  height: 120px;
+  font-size: 20px;
+  opacity: 1;
+}
+.corousel__swiper:active ~ .corousel__drag {
+  width: 50px;
+  height: 50px;
+  font-size: 0;
+  color: #36a112;
+}
+.corousel__drag {
+  padding: 20px;
+  pointer-events: none;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  font-size: 0px;
+  opacity: 0;
+  z-index: 2;
+  width: 0px;
+  height: 0px;
+  transition: width 0.7s, height 0.7s, font-size 0.7s, opacity 0.7s;
+  background-color: #36a112;
+  border-radius: 50%;
+}
+.corousel__item:hover > .corousel__texts {
+  bottom: 10px;
+
+  & > p {
+    opacity: 1;
+  }
+
+  & > h3 {
+    opacity: 1;
+  }
+
+  & > p > span {
+    opacity: 1;
+  }
+}
+.corousel__texts {
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  max-width: 300px;
+  position: absolute;
+  left: 30px;
+  margin: auto;
+  bottom: -50px;
+  transition: 0.5s;
+
+  & > p {
+    max-width: 223px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 1 4px;
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  & > h3 {
+    font-size: 28px;
+    font-weight: bold;
+    transition-delay: 0.1s;
+    transition: 0.5s;
+    color: #36a112;
+    opacity: 0;
+  }
+
+  & > p > span {
+    margin-right: 11px;
+    display: inline-block;
+    width: 3px;
+    height: 31px;
+    background-color: #e2b671;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .corousel__drag {
+    display: none;
+  }
+
+  .corousel__texts {
+    bottom: 10px;
+    & > p {
+      opacity: 1;
+    }
+
+    & > h3 {
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .corousel {
+    margin-top: 200px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .corousel {
+    margin-top: 100px;
+  }
+}

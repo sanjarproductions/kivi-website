@@ -1,0 +1,65 @@
+.works {
+  margin-bottom: 300px;
+}
+
+.works__inner {
+  pointer-events: none;
+  font-family: "K2D", sans-serif;
+  font-weight: 800;
+  position: relative;
+  font-size: 170px;
+  line-height: 0.8;
+}
+
+.works__button {
+  pointer-events: painted;
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 1157px) {
+  .works__inner {
+    font-size: 100px;
+  }
+
+  .works__button {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 724px) {
+  .works {
+    margin-bottom: 200px;
+  }
+  .works__inner {
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 617px) {
+  .works__inner {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 444px) {
+  .works__inner {
+    font-size: 50px;
+  }
+  .works__button {
+    margin-top: 0;
+    margin-left: 0;
+    position: absolute;
+    bottom: -130px;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 279px) {
+  .works__inner {
+    font-size: 40px;
+  }
+}
