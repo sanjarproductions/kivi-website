@@ -38,11 +38,11 @@ export const Footer = memo(() => {
               </a>
               <a
                 className="footer__address-link"
-                href="tel:+998716606060"
+                href="tel:+998900658388"
                 target="_blank"
                 data-aos="zoom-in-up"
               >
-                +998 90 054 83 88
+                +998 90 065 83 88
               </a>
               <a
                 className="footer__address-link"
@@ -50,7 +50,7 @@ export const Footer = memo(() => {
                 target="_blank"
                 data-aos="zoom-in-up"
               >
-                Tashkent.sh Sergeli 6
+                Tashkent Uzbekistan
               </a>
             </div>
           </div>
